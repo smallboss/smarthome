@@ -1,0 +1,96 @@
+<template name="projectsAll">
+    <div>
+        <h3>Projects</h3>
+        <span class="help-block">Some explanation will be placed here..</span>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Created</th>
+                <th>Last Modified</th>
+                <th>Actions</th></tr>
+            </thead>
+            <tbody>
+            <tr> <th scope="row">1</th>
+                <td>My Sweet Home</td>
+                <td>erginakin@gmail.com</td>
+                <td>8.10.2016 17:01</td>
+                <td>8.10.2016 17:01</td>
+                <td>
+                    <p>
+                        <a href="#">Unpublish</a> | <a href="#">Clone</a> | <a href="#">Edit</a> | <a href="#" data-toggle="modal" data-target=".modal-confirm-delete-project">Delete</a>
+                    </p>
+                    <p>
+                        <a href="/projectsDevices">Devices</a><span class="label label-success">1 Online</span><span class="label label-default">1 Offline</span> |
+                        <a href="/projectsUsers">Shared Users</a><span class="label label-success">2</span> |
+                        <a href="/projectsPages">Pages</a><span class="label label-success">3</span> |
+                        <a href="/projectsScenes">Scenes</a><span class="label label-success">1</span> |
+                        <a href="#">Triggers</a><span class="label label-default">0</span>
+                    </p>
+                </td></tr>
+            <tr> <th scope="row">2</th>
+                <td>My Office</td>
+                <td>fedirakin@gmail.com</td>
+                <td>8.10.2016 17:01</td>
+                <td>8.10.2016 17:01</td>
+                <td><a href="#">Edit</a> | <a href="#" data-toggle="modal" data-target=".modal-confirm-remove-sharing">Remove Sharing</a></td></tr>
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary" onclick="window.location.href='/projectsAddNew'">Add New Project</button>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>Developer Notes:</p>
+                <p>
+                    Everybody can add project for his/her own.</p>
+                <p>
+                    User can not publish project unless at least one device and one page included in the project</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL Confirm Delete Project -->
+    <div class="modal fade modal-confirm-delete-project" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="mymodal-header">
+                    <h2>Please Confirm</h2>
+                    <a href="" class="btn-close" data-dismiss="modal" aria-hidden="true">×</a>
+                </div>
+                <div class="mymodal-body">
+                    <p>Are you sure to delete the project and all it's contents? This is an unreversable action.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /MODAL Confirm Delete Project -->
+
+    <!-- MODAL Confirm Remove Sharing -->
+    <div class="modal fade modal-confirm-remove-sharing" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="mymodal-header">
+                    <h2>Please Confirm</h2>
+                    <a href="" class="btn-close" data-dismiss="modal" aria-hidden="true">×</a>
+                </div>
+                <div class="mymodal-body">
+                    <p>Are you sure to remove yourself from the project users? If you remove now you will ask to project owner to include you again.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button class="btn btn-danger">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /MODAL Confirm Remove Sharing -->
+</template>

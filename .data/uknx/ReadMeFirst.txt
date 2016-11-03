@@ -1,0 +1,11 @@
+- Single Page Application
+- The app will consist a landing page, I will design this.
+- Standard User management with social login. There will be user roles. The ready Bootstrap login design is ok.
+- The form validations will be build around supplied Mongo Schemas.
+- Security measures will be applied (for example server side data manupulation, do not pass site data to client)
+- Site will be multilanguage. Supplied site design is English, you can add your language as a second language.
+- Settings link is empty now. It is reserved for user things, such as change password etc.
+- The most complicated page is peripherals-zoomable.html. I also recorded a movie to show how it works. It simply creates some buttons, you can drap and drop those buttons over the background image. The button visuality is built around selected parameters. (there are a lot of additional fields which are not used in visualization)
+- The supplied peripherals-zoomable.html only contains Command Button fields. Other button types will be build depending on supplied Mongo Schema. They have all similar fields.
+- Users will be able to upload some images. Save those images in a folder with unique names (do not save them in database) If user deletes a project, the related images will be deleted as well to save disk space. User uploaded images and data is only visible to owner. (unless shared with other users)
+

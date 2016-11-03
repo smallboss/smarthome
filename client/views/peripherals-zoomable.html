@@ -1,0 +1,421 @@
+<template name="peripheralsZoomable">
+    <div id="zoom_container">
+        <img id="planPicture" src="img/plan1.png" width="1822" height="1415" />
+        <div class="landmarks" data-show-at-zoom="0" data-allow-drag="false" data-allow-scale="false">
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <!-- CircularMenu - Add Objects -->
+        <div id="circularMenu" class="circular-menu">
+            <a title="Add Peripherals" class="floating-btn" onclick="toggleCircularMenu();">
+                <i class="fa fa-plus"></i>
+            </a>
+            <menu class="items-wrapper">
+                <a href="#" title="Menu Button" class="menu-item icon-menu" onclick="toggleCircularMenu();"></a>
+                <a href="#modalNewCommandButton" title="Command Button" class="menu-item icon-bulb" onclick="toggleCircularMenu();"></a>
+                <a href="#modalNewVideo" title="Video" class="menu-item icon-camrecorder" onclick="toggleCircularMenu();"></a>
+                <a href="#modalNewChime" title="Chime" class="menu-item icon-bell" onclick="toggleCircularMenu();"></a>
+                <a href="#" title="Detector" class="menu-item icon-fire" onclick="toggleCircularMenu();"></a>
+                <a href="#" title="Label" class="menu-item icon-tag" onclick="toggleCircularMenu();"></a>
+
+
+            </menu>
+        </div>
+        <!-- /CircularMenu - Add Objects -->
+
+        <!-- MODAL Add New Command Button Object -->
+        <div class="mymodal" id="modalNewCommandButton" aria-hidden="true">
+            <div class="mymodal-dialog">
+                <div class="mymodal-header">
+                    <h2>Add New Command Button Object</h2>
+                    <a href="#" class="btn-close" aria-hidden="true">×</a>
+                </div>
+                <div class="mymodal-body">
+
+                    <div id="addNewCBWizard">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-wizard" id="addNewCBTabs" role="tablist">
+                            <li role="presentation"><a href="#addNewCBStep1" aria-controls="addNewCBStep1" role="tab" data-toggle="tab">Visual Design</a></li>
+                            <li role="presentation"><a href="#addNewCBStep2" aria-controls="addNewCBStep2" role="tab" data-toggle="tab">KNX Properties</a></li>
+                            <li role="presentation"><a href="#addNewCBStep3" aria-controls="addNewCBStep3" role="tab" data-toggle="tab">Feedback</a></li>
+                            <li role="presentation"><a href="#addNewCBStep4" aria-controls="addNewCBStep4" role="tab" data-toggle="tab">Range Feature</a></li>
+                            <li role="presentation"><a href="#addNewCBStep5" aria-controls="addNewCBStep5" role="tab" data-toggle="tab">Range KNX Properties</a></li>
+                            <li role="presentation"><a href="#addNewCBStep6" aria-controls="addNewCBStep6" role="tab" data-toggle="tab">Range Feedback</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane" id="addNewCBStep1">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Display Name</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep1_name" type="text" class="form-control">
+                                            <span class="help-block m-b-none">Name for display purposes</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Color</label>
+                                        <div class="col-sm-10">
+                                            <div id="addNewCBStep1_CP" data-format="hex" class="input-group colorpicker-component">
+                                                <input type="text" name="addNewCBStep1_CP" value="#000000" class="form-control" />
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                            <span class="help-block m-b-none">The icon's color</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Icon Visual</label>
+                                        <div class="col-sm-10">
+                                            <!-- SLY - Horizontal Scrolling Image Selection -->
+                                            <div id="addNewCBStep1_Sly" class="icon-image-select">
+                                                <button class="backward"><i class="fa fa-chevron-left"></i></button>
+                                                <button class="forward"><i class="fa fa-chevron-right"></i></button>
+                                                <div class="frame">
+                                                    <ul id="addNewCBStep1_SlyList">
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-lamp.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-door.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-faucet.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-fire.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-gears.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-glass.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-motion.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-plugin.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-tea.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-temperature.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-time-moon.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-time-sun.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-umbrella.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-waterdrop.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/neo-window.png"></li>
+                                                        <li><img class="image-listing-item img-circle" src="img/icons/pin.png"></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="scrollbar">
+                                                    <div class="handle">
+                                                        <div class="mousearea"></div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /SLY - Horizontal Scrolling Image Selection -->
+                                            <span class="help-block m-b-none">Select from library or upload your own image</span>
+                                            <!-- Bootstrap File Upload -->
+                                            <div id="addNewCBStep1_FileInput" class="fileinput fileinput-new" data-provides="fileinput">
+                                                <div class="fileinput-preview fileinput-inline" data-trigger="fileinput"></div>
+                                                <div class="fileinput-inline">
+													<span class="btn btn-default btn-file">
+														<span class="fileinput-new">Select File</span>
+														<span class="fileinput-exists">Change</span>
+														<input type="file" name="addNewCBStep1_File" />
+													</span>
+                                                    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                </div>
+                                            </div>
+                                            <span class="help-block">Only PNG file allowed and square size, transparent background is adviced. It is highly recommended to take existing icons as reference. Max size 240x240 pixel</span>
+                                            <!-- /Bootstrap File Upload -->
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="addNewCBStep2">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">KNX Group Address</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep2_KnxAddress" type="text" class="form-control">
+                                            <span class="help-block m-b-none">KNX Group Address which will be written to when click event fires</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Data Point Type For Trigger Value</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" name="addNewCBStep2_Dpt">
+                                                <option value = "1" >1.001 on/off</option>
+                                                <option value = "2" >1.002 boolean</option>
+                                                <option value = "3" >1.003 enable</option>
+                                                <option value = "4" >1.004 ramp</option>
+                                                <option value = "5" >1.005 alarm</option>
+                                                <option value = "6" >1.006 binary value</option>
+                                                <option value = "7" >1.007 step</option>
+                                                <option value = "8" >1.008 up/down</option>
+                                                <option value = "9" >1.009 open/close</option>
+                                                <option value = "10" >1.010 start/stop</option>
+                                                <option value = "11" >1.011 state</option>
+                                                <option value = "12" >1.012 invert</option>
+                                                <option value = "13" >1.015 reset</option>
+                                                <option value = "14" >1.016 acknowledge</option>
+                                                <option value = "15" >1.017 trigger</option>
+                                                <option value = "16" >1.018 occupied</option>
+                                                <option value = "17" >1.019 open window or door</option>
+                                                <option value = "18" >1.021 and/or</option>
+                                                <option value = "19" >1.022 scene A/B</option>
+                                                <option value = "20" >1.100 cooling/heating</option>
+                                                <option value = "35" >5.001 percentage (0..100%)</option>
+                                                <option value = "36" >5.003 angle (degrees)</option>
+                                                <option value = "37" >5.004 percentage (0..255%)</option>
+                                                <option value = "38" >5.005 ratio (0..255)</option>
+                                                <option value = "39" >5.006 tariff (0..255)</option>
+                                                <option value = "40" >5.010 counter pulses (0..255)</option>
+                                                <option value = "60" >9.001 temperature (°C)</option>
+                                                <option value = "61" >9.002 temperature difference (K)</option>
+                                                <option value = "62" >9.003 kelvin/hour (K/h)</option>
+                                                <option value = "63" >9.004 lux</option>
+                                                <option value = "64" >9.005 speed (m/s)</option>
+                                                <option value = "65" >9.006 pressure (Pa)</option>
+                                                <option value = "66" >9.007 percentage (%)</option>
+                                                <option value = "67" >9.008 parts/million (ppm)</option>
+                                                <option value = "68" >9.010 time (s)</option>
+                                                <option value = "69" >9.011 time (ms)</option>
+                                                <option value = "70" >9.020 voltage (mV)</option>
+                                                <option value = "71" >9.021 current (mA)</option>
+                                                <option value = "72" >9.022 power density (W/m²)</option>
+                                                <option value = "73" >9.023 kelvin/percent (K/%)</option>
+                                                <option value = "74" >9.024 power (kW)</option>
+                                                <option value = "75" >9.025 volume flow (I/h)</option>
+                                                <option value = "76" >9.026 rain amount (l/m²)</option>
+                                                <option value = "77" >9.027 temperature (°F)</option>
+                                                <option value = "78" >9.028 wind speed (km/h)</option>
+                                            </select>
+                                            <span class="help-block m-b-none">Select appropriate Data Point Type (DPT)</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Toggle Button Enabling</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep2_ToggleEn" type="checkbox" data-size="small" checked>
+                                            <span class="help-block m-b-none">Button has two state each sends different command when clicked</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Value To Send For Click Event When Highlighted</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep2_ValActive" type="text" class="form-control">
+                                            <span class="help-block m-b-none">This value will be send when the icon is in highlighted situation. If feedback is not enabled, the event sends this same value without changing itself status. Write appropriate value as integer dependant on selected DPT</span>
+                                        </div>
+                                    </div>
+                                    <div id="addNewCBStep2_ValPassiveField" class="form-group animated">
+                                        <label class="col-sm-2 control-label">Value To Send For Click Event When Shaded</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep2_ValPassive" type="text" class="form-control">
+                                            <span class="help-block m-b-none">This value will be send when the icon is in shaded situation. Write appropriate value as integer dependant on selected DPT</span>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="addNewCBStep3">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Feedback Enable</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep3_KnxFbEn" type="checkbox" data-size="small" checked>
+                                            <span class="help-block m-b-none">Enable reading peripheral's actual status</span>
+                                        </div>
+                                    </div>
+                                    <div id="addNewCBStep3_KnxFbAddressField" class="form-group animated">
+                                        <label class="col-sm-2 control-label">KNX Group Address For Feedback</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep3_KnxFbAddress" type="text" class="form-control">
+                                            <span class="help-block m-b-none">KNX Group Address which will be read for actual status. Received value must match the send values defined above</span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="addNewCBStep4">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Range selection</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep4_RangeEn" type="checkbox" data-size="small" checked>
+                                            <span class="help-block m-b-none">Add a feature to the button of selecting a value in a scale. This feature is apart from the command when button clicked</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group animated CBRangeField">
+                                        <label class="col-sm-2 control-label">Functional Model</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" name="addNewCBStep4_FuncModel">
+                                                <option value = "Absolute" >Absolute</option>
+                                                <option value = "Differential" >Differential</option>
+                                                <option value = "Combo" >Combo</option>
+                                            </select>
+									<span class="help-block m-b-none">
+										<p>Absolute: Write selected value directly, without modification</p>
+										<p>Differential: Write requested value by offset from the current known value</p>
+										<p>Combo: Slider selects between label:value pairs</p>
+									</span>
+                                        </div>
+                                    </div>
+
+
+                                </fieldset>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="addNewCBStep5">
+                                <fieldset class="animated CBRangeField">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">KNX Group Address For Range Selection</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep5_KnxRangeAddress" type="text" class="form-control">
+                                            <span class="help-block m-b-none">KNX Group Address which will be written for selected value</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Data Point Type For Range Selection</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" name="addNewCBStep5_RangeDpt">
+                                                <option value = "1" >1.001 on/off</option>
+                                                <option value = "2" >1.002 boolean</option>
+                                                <option value = "3" >1.003 enable</option>
+                                                <option value = "4" >1.004 ramp</option>
+                                                <option value = "5" >1.005 alarm</option>
+                                                <option value = "6" >1.006 binary value</option>
+                                                <option value = "7" >1.007 step</option>
+                                                <option value = "8" >1.008 up/down</option>
+                                                <option value = "9" >1.009 open/close</option>
+                                                <option value = "10" >1.010 start/stop</option>
+                                                <option value = "11" >1.011 state</option>
+                                                <option value = "12" >1.012 invert</option>
+                                                <option value = "13" >1.015 reset</option>
+                                                <option value = "14" >1.016 acknowledge</option>
+                                                <option value = "15" >1.017 trigger</option>
+                                                <option value = "16" >1.018 occupied</option>
+                                                <option value = "17" >1.019 open window or door</option>
+                                                <option value = "18" >1.021 and/or</option>
+                                                <option value = "19" >1.022 scene A/B</option>
+                                                <option value = "20" >1.100 cooling/heating</option>
+                                                <option value = "35" >5.001 percentage (0..100%)</option>
+                                                <option value = "36" >5.003 angle (degrees)</option>
+                                                <option value = "37" >5.004 percentage (0..255%)</option>
+                                                <option value = "38" >5.005 ratio (0..255)</option>
+                                                <option value = "39" >5.006 tariff (0..255)</option>
+                                                <option value = "40" >5.010 counter pulses (0..255)</option>
+                                                <option value = "60" >9.001 temperature (°C)</option>
+                                                <option value = "61" >9.002 temperature difference (K)</option>
+                                                <option value = "62" >9.003 kelvin/hour (K/h)</option>
+                                                <option value = "63" >9.004 lux</option>
+                                                <option value = "64" >9.005 speed (m/s)</option>
+                                                <option value = "65" >9.006 pressure (Pa)</option>
+                                                <option value = "66" >9.007 percentage (%)</option>
+                                                <option value = "67" >9.008 parts/million (ppm)</option>
+                                                <option value = "68" >9.010 time (s)</option>
+                                                <option value = "69" >9.011 time (ms)</option>
+                                                <option value = "70" >9.020 voltage (mV)</option>
+                                                <option value = "71" >9.021 current (mA)</option>
+                                                <option value = "72" >9.022 power density (W/m²)</option>
+                                                <option value = "73" >9.023 kelvin/percent (K/%)</option>
+                                                <option value = "74" >9.024 power (kW)</option>
+                                                <option value = "75" >9.025 volume flow (I/h)</option>
+                                                <option value = "76" >9.026 rain amount (l/m²)</option>
+                                                <option value = "77" >9.027 temperature (°F)</option>
+                                                <option value = "78" >9.028 wind speed (km/h)</option>
+                                            </select>
+                                            <span class="help-block m-b-none">Select appropriate Data Point Type (DPT)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group CBRangeSliderField">
+                                        <label class="col-sm-2 control-label">Range Step</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep5_RangeStep" type="text" class="form-control">
+                                            <span class="help-block m-b-none">Steps between slider values</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group CBRangeSliderField">
+                                        <label class="col-sm-2 control-label">Range Minimum</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep5_RangeMin" type="text" class="form-control">
+                                            <span class="help-block m-b-none">Minimum value selectable, converted according to DPT type</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group CBRangeSliderField">
+                                        <label class="col-sm-2 control-label">Range Maximum</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep5_RangeMax" type="text" class="form-control">
+                                            <span class="help-block m-b-none">Maximum value selectable, converted according to DPT type</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group CBRangeComboField">
+                                        <label class="col-sm-2 control-label">Combo Pairs</label>
+                                        <div class="col-sm-10">
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control custom-field" placeholder="Key">
+                                                <span class="custom-field">:</span>
+                                                <input type="text" class="form-control custom-field" placeholder="Value">
+                                                <button type="button" class="btn btn-danger custom-field">Delete</button>
+                                            </div>
+                                        </div>
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-10">
+                                            <div class="form-inline">
+                                                <input type="text" class="form-control custom-field" placeholder="Key">
+                                                <span class="custom-field">:</span>
+                                                <input type="text" class="form-control custom-field" placeholder="Value">
+                                                <button type="button" class="btn btn-success custom-field">Add</button>
+                                            </div>
+                                        </div>
+                                        <label class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-10">
+                                            <span class="help-block m-b-none">Slider selects between key:value pairs</span>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="addNewCBStep6">
+                                <fieldset class="animated CBRangeField">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Feedback Enable</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep6_RangeFbEn" type="checkbox" data-size="small" checked>
+                                            <span class="help-block m-b-none">Enable reading peripheral's actual value</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group animated CBRangeFbField">
+                                        <label class="col-sm-2 control-label">Feedback Group Address</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep6_RangeKnxAddress" type="text" class="form-control">
+                                            <span class="help-block m-b-none">KNX Group Address which will be read for actual value</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">Secondary Feedback Enable</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep6_SecRangeFbEn" type="checkbox" data-size="small" checked>
+                                            <span class="help-block m-b-none">Enable reading peripheral's actual value</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group animated CBRangeSecFbField">
+                                        <label class="col-sm-2 control-label">Secondary Feedback Group Address</label>
+                                        <div class="col-sm-10">
+                                            <input name="addNewCBStep6_SecRangeKnxAddress" type="text" class="form-control">
+                                            <span class="help-block m-b-none">KNX Group Address which will be read for actual value</span>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Buttons -->
+                        <div class="wizard-controls">
+                            <button type="button" class="btn btn-primary wizard-btn btn-left previous">
+                                <i class="fa fa-chevron-left"></i> Previous
+                            </button>
+                            <button type="button" class="btn btn-primary wizard-btn btn-right next">
+                                Next <i class="fa fa-chevron-right"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary wizard-btn btn-right finish">
+                                Finish
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /MODAL Add Command Button View Object -->
+    </div>
+</template>
+

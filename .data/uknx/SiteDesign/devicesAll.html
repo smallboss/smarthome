@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>uKNX</title>
+	<link rel="stylesheet" href="vendor/normalize/normalize-4.1.1.css">
+	<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+	<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendor/open-sans/open-sans.css">
+	<link rel="stylesheet" href="vendor/smooth-zoom/css/smoothZoom.css">
+	<link rel="stylesheet" href="vendor/circular-menu/css/circularMenu.css">
+	<link rel="stylesheet" href="vendor/left-navbar/css/leftNavbar.css">
+	<link rel="stylesheet" href="vendor/jquery-ui/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+	<link rel="stylesheet" href="vendor/jasny-bootstrap/css/jasny-bootstrap.css">
+	<link rel="stylesheet" href="vendor/bootstrap-switch/css/bootstrap-switch.css">
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- SideMenu - Left Navigation -->
+<div id="nav" class="nav">
+	<div class="icon">
+		<ul>
+			<li><a href="dashboard.html"><i class="icon-home"></i></a></li>
+			<li><a href="devicesAll.html"><i class="icon-game-controller"></i></a></li>
+			<li><a href="projectsAll.html"><i class="icon-layers"></i></a></li>
+			<li><a href="#"><i class="icon-wrench"></i></a></li>
+			<li><a href="#"><i class="icon-logout"></i></a></li>
+		</ul>
+	</div>
+	<div class="text">
+		<ul>
+			<li><a href="dashboard.html">Dashboard</a>
+			</li>
+			<li><a href="devicesAll.html" >Devices</a>
+			</li>
+			<li><a href="projectsAll.html" >Projects</a>
+			</li>
+			<li><a href="#" >Settings</a>
+			</li>
+			<li><a href="#" >Log out</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /SideMenu - Left Navigation -->
+
+<div class="left-menu-spacer content">
+	<h3>Devices
+	</h3>
+<span class="help-block">Some explanation will be placed here..</span>
+
+<table class="table table-striped"> 
+<thead> 
+<tr> 
+<th>#</th> 
+<th>Alias</th> 
+<th>MAC Address</th> 
+<th>Model</th> 
+<th>Firmware Rev</th> 
+<th>Status</th> 
+<th>IP (Last Known)</th>
+<th>Last Login</th> 
+<th>Actions</th></tr> 
+</thead> 
+<tbody> 
+<tr>
+<th scope="row">1</th>
+<td>Home Gateway</td>
+<td>00:0A:01:02:EA:A3</td>
+<td>Origin-S</td>
+<td>1.1</td>
+<td><span class="label label-success">Online</span></td>
+<td>192.168.1.2</td><td>8.10.2016 17:01</td> 
+<td><a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Makeover Ownership</a></td>
+</tr> 
+<tr>
+<th scope="row">2</th>
+<td>Office Gateway</td>
+<td>00:0A:01:02:EA:A4</td>
+<td>Origin-S</td>
+<td>1.2</td>
+<td><span class="label label-default">Offline</span></td>
+<td>192.168.1.2</td><td>8.10.2016 17:01</td>
+<td><a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Makeover Ownership</a></td>
+</tr>
+</tbody>
+</table>
+
+<button type="button" class="btn btn-primary">Add New Device</button>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p>Developer Notes:</p>
+		<p>
+	User Role: User. 
+	Actions: Edit (Only Alias and fields from MongoDB Schema except cloud server address and port)
+	</p>
+	 <p>
+	User Role: Super User. 
+	Edit (Only Alias and fields from MongoDB Schema except cloud server address and port), Ownership
+	 </p>
+	 <p>
+	User Role: Admin. 
+	Edit (Alias, MAC, Model and fields from MongoDB Schema), Delete, Ownership, Add New Device
+	</p>
+	<p>
+	Firmware Rev, IP, Last Login Fields will be updated by system runtime always
+	</p>
+  </div>
+</div>
+
+
+</div>
+
+<script src="vendor/jquery/jquery-3.1.1.min.js"></script>
+<script src="vendor/jquery-ui/js/jquery-ui.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/smooth-zoom/js/jquery.smoothZoom.js"></script>
+<script src="vendor/circular-menu/js/circularMenu.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="vendor/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+<script src="vendor/bootstrap-switch/js/bootstrap-switch.js"></script>
+<script src="vendor/sly/sly.min.js"></script>
+<script src="vendor/bootstrap-wizard/js/jquery.bootstrap.wizard.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

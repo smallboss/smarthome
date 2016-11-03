@@ -1,0 +1,63 @@
+<template name="devicesAll">
+	<h3>Devices</h3>
+    <span class="help-block">Some explanation will be placed here..</span>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Alias</th>
+                <th>MAC Address</th>
+                <th>Model</th>
+                <th>Firmware Rev</th>
+                <th>Status</th>
+                <th>IP (Last Known)</th>
+                <th>Last Login</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Home Gateway</td>
+                <td>00:0A:01:02:EA:A3</td>
+                <td>Origin-S</td>
+                <td>1.1</td>
+                <td><span class="label label-success">Online</span></td>
+                <td>192.168.1.2</td><td>8.10.2016 17:01</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Makeover Ownership</a></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Office Gateway</td>
+                <td>00:0A:01:02:EA:A4</td>
+                <td>Origin-S</td>
+                <td>1.2</td>
+                <td><span class="label label-default">Offline</span></td>
+                <td>192.168.1.2</td><td>8.10.2016 17:01</td>
+                <td><a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Makeover Ownership</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='/devicesAddNew'">Add New Device</button>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>Developer Notes:</p>
+            <p>
+                User Role: User.
+                Actions: Edit (Only Alias and fields from MongoDB Schema except cloud server address and port)
+            </p>
+            <p>
+                User Role: Super User.
+                Edit (Only Alias and fields from MongoDB Schema except cloud server address and port), Ownership
+            </p>
+            <p>
+                User Role: Admin.
+                Edit (Alias, MAC, Model and fields from MongoDB Schema), Delete, Ownership, Add New Device
+            </p>
+            <p>
+                Firmware Rev, IP, Last Login Fields will be updated by system runtime always
+            </p>
+        </div>
+    </div>
+</template>
+

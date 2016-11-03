@@ -1,0 +1,45 @@
+<template name="projectsDevices">
+    <h3>Devices</h3>
+    <span class="help-block">Some explanation will be placed here..</span>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Alias</th>
+            <th>MAC Address</th>
+            <th>Model</th>
+            <th>Status</th>
+            <th>Actions</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Home Gateway</td>
+            <td>00:0A:01:02:EA:A3</td>
+            <td>Origin-S</td>
+            <td><span class="label label-success">Online</span></td>
+            <td><a href="#">Remove</a></td>
+        </tr>
+        <tr>
+            <td>Office Gateway</td>
+            <td>00:0A:01:02:EA:A4</td>
+            <td>Origin-S</td>
+            <td><span class="label label-default">Offline</span></td>
+            <td><a href="#">Remove</a></td>
+        </tr>
+        <tr>
+            <td>A Gateway</td>
+            <td>00:0A:01:02:EA:A6</td>
+            <td>Origin-S</td>
+            <td><span class="label label-default">Offline</span></td>
+            <td><a href="#">Add</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>Developer Notes:</p>
+            <p>Only owned devices listed here</p>
+        </div>
+    </div>
+</template>

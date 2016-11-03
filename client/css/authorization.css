@@ -1,0 +1,32 @@
+.div-authorization #login-buttons {
+    float: right;
+}
+.register-congratulations span {
+    padding: 5px;
+    color: #1dfb8a;
+    border: 1px solid grey;
+}
+/*.btn-register {
+    background: #5b3bff;
+    color: white;
+    text-shadow: none;
+}*/
+/*.overlay {
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    height: 100vh;
+    width: 100vw;
+}
+#loginModal .modal-content {
+    position: absolute;
+    top: 30vh!important;
+    padding: 10px;
+    width: 400px;
+}
+#loginModal .modal-sm .form-group label {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+#loginModal .modal-sm .form-group div {
+    margin: 5px 0;
+}*/

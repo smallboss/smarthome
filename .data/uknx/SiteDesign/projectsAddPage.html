@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>uKNX</title>
+	<link rel="stylesheet" href="vendor/normalize/normalize-4.1.1.css">
+	<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+	<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendor/open-sans/open-sans.css">
+	<link rel="stylesheet" href="vendor/smooth-zoom/css/smoothZoom.css">
+	<link rel="stylesheet" href="vendor/circular-menu/css/circularMenu.css">
+	<link rel="stylesheet" href="vendor/left-navbar/css/leftNavbar.css">
+	<link rel="stylesheet" href="vendor/jquery-ui/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+	<link rel="stylesheet" href="vendor/jasny-bootstrap/css/jasny-bootstrap.css">
+	<link rel="stylesheet" href="vendor/bootstrap-switch/css/bootstrap-switch.css">
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<!-- SideMenu - Left Navigation -->
+<div id="nav" class="nav">
+	<div class="icon">
+		<ul>
+			<li><a href="dashboard.html"><i class="icon-home"></i></a></li>
+			<li><a href="devicesAll.html"><i class="icon-game-controller"></i></a></li>
+			<li><a href="projectsAll.html"><i class="icon-layers"></i></a></li>
+			<li><a href="#"><i class="icon-wrench"></i></a></li>
+			<li><a href="#"><i class="icon-logout"></i></a></li>
+		</ul>
+	</div>
+	<div class="text">
+		<ul>
+			<li><a href="dashboard.html">Dashboard</a>
+			</li>
+			<li><a href="devicesAll.html" >Devices</a>
+			</li>
+			<li><a href="projectsAll.html" >Projects</a>
+			</li>
+			<li><a href="#" >Settings</a>
+			</li>
+			<li><a href="#" >Log out</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- /SideMenu - Left Navigation -->
+
+<div class="left-menu-spacer content">
+	<h3>Add New Page</h3>
+	<span class="help-block">A page is a container for building a user interface with homeplan image and peripheral visuals</span>
+	
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Display Name</label>
+			<div class="col-sm-10">
+				<input name="addNewCBStep1_name" type="text" class="form-control">
+				<span class="help-block m-b-none">Name for display purposes</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Functional Model</label>
+			<div class="col-sm-10">
+				<select class="form-control" name="pageFuncModel">
+					<option value = "zoomable">Zoomable Image</option>
+					<option value = "fixed">Full Size Fixed Image</option>
+					<option value = "list">List Based</option>
+				</select>
+				<span class="help-block m-b-none">Page behaviour</span>
+			</div>
+		</div>
+		
+		<div id="zoomable-image-fields">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Show Labels</label>
+				<div class="col-sm-10">
+					<input name="addNewCBStep3_KnxFbEn" type="checkbox" data-size="small" checked>
+					<span class="help-block m-b-none">Display peripheral name labels with icons for more explanatory peripheral display</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Icon Visibility</label>
+				<div class="col-sm-10">
+					<div class="slider-row">
+						<div id="sl1" class="slider"></div>
+						<span class="label label-primary" id="sl1val">0</span>
+					</div>
+					<span class="help-block m-b-none">This is a limit value under that peripherals seem as dot and they are not functional. On runtime, users can display peripherals as functional while zooming in. Set 0 to show always.</span>
+				</div>
+			</div>		
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Icon Scale</label>
+				<div class="col-sm-10">
+					<div class="slider-row">
+						<div id="sl2" class="slider"></div>
+						<span class="label label-primary" id="sl2val">0</span>
+					</div>
+					<span class="help-block m-b-none">Set the peripheral icons scaling, how much big</span>
+				</div>
+			</div>			
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Background Color</label>
+				<div class="col-sm-10">
+					<div id="addNewCBStep1_CP" data-format="hex" class="input-group colorpicker-component">
+						<input type="text" name="addNewCBStep1_CP" value="#000000" class="form-control" />
+						<span class="input-group-addon"><i></i></span>
+					</div>
+					<span class="help-block m-b-none">The page's background color. This color will be used for filling empty spaces near picture</span>
+				</div>
+			</div>
+			<!-- Bootstrap File Upload -->
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Background Picture</label>
+				<div class="col-sm-10">
+			<div id="addNewCBStep1_FileInput" class="fileinput fileinput-new" data-provides="fileinput">
+				<div class="fileinput-preview fileinput-inline" data-trigger="fileinput"></div>
+				<div class="fileinput-inline">
+							<span class="btn btn-default btn-file">
+								<span class="fileinput-new">Select File</span>
+								<span class="fileinput-exists">Change</span>
+								<input type="file" name="addNewCBStep1_File" />
+							</span>
+					<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+				</div>
+			</div>
+					<span class="help-block m-b-none">Only PNG file types are allowed. Transparent background and high resolution image is advice</span>
+				</div>
+			</div>		
+			<!-- /Bootstrap File Upload -->
+		</div>		
+		
+		<div id="fixed-image-fields">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Show Labels</label>
+				<div class="col-sm-10">
+					<input name="addNewCBStep3_KnxFbEn" type="checkbox" data-size="small" checked>
+					<span class="help-block m-b-none">Display peripheral name labels with icons for more explanatory peripheral display</span>
+				</div>
+			</div>	
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Icon Scale</label>
+				<div class="col-sm-10">
+					<div class="slider-row">
+						<div id="sl3" class="slider"></div>
+						<span class="label label-primary" id="sl3val">0</span>
+					</div>
+					<span class="help-block m-b-none">Set the peripheral icons scaling, how much big</span>
+				</div>
+			</div>			
+			<!-- Bootstrap File Upload -->
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Background Picture</label>
+				<div class="col-sm-10">
+			<div id="addNewCBStep1_FileInput" class="fileinput fileinput-new" data-provides="fileinput">
+				<div class="fileinput-preview fileinput-inline" data-trigger="fileinput"></div>
+				<div class="fileinput-inline">
+							<span class="btn btn-default btn-file">
+								<span class="fileinput-new">Select File</span>
+								<span class="fileinput-exists">Change</span>
+								<input type="file" name="addNewCBStep1_File" />
+							</span>
+					<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+				</div>
+			</div>
+					<span class="help-block m-b-none">Only PNG file types are allowed. Transparent background and high resolution image is adviced</span>
+				</div>
+			</div>		
+			<!-- /Bootstrap File Upload -->
+		</div>	
+		
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary">Add</button>
+			</div>
+		</div>
+	</form>	
+
+</div>
+
+
+
+<script src="vendor/jquery/jquery-3.1.1.min.js"></script>
+<script src="vendor/jquery-ui/js/jquery-ui.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/smooth-zoom/js/jquery.smoothZoom.js"></script>
+<script src="vendor/circular-menu/js/circularMenu.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="vendor/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="vendor/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+<script src="vendor/bootstrap-switch/js/bootstrap-switch.js"></script>
+<script src="vendor/sly/sly.min.js"></script>
+<script src="vendor/bootstrap-wizard/js/jquery.bootstrap.wizard.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

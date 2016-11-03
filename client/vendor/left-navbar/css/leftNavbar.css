@@ -1,0 +1,89 @@
+.nav {
+    height: 100%;
+    position: absolute;
+    left: -2em;
+    top: 0;
+    z-index: 1000;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.nav .icon {
+    position: absolute;
+	width: 104px;
+    left: 0;
+    top: 0;
+    z-index: 990;
+    height: 100%;
+    background: #262626;
+}
+.nav .icon li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    list-style-type: none;
+}
+.nav .icon a {
+    display: block;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6em;
+    color: #999999;
+    text-shadow: 0 1px 0 black;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+.nav .icon a:hover {
+    color: white;
+    text-decoration: none;
+    -webkit-transform: translateX(10px) scale(1.2);
+    transform: translateX(10px) scale(1.2);
+}
+
+.nav:hover .text {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.nav .text {
+    position: absolute;
+    left: 63px;
+    top: 0;
+    z-index: 980;
+    height: 100%;
+    background: #262626;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-transition: -webkit-transform .24s linear;
+    transition: -webkit-transform .24s linear;
+    transition: transform .24s linear, -webkit-transform .24s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: perspective(1000px) rotateY(90deg);
+    transform: perspective(1000px) rotateY(90deg);
+}
+.nav .text li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.nav .text a {
+    display: block;
+    width: 200px;
+    height: 64px;
+    line-height: 64px;
+    text-indent: 1em;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #999999;
+    text-shadow: 0 1px 0 black;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.nav .text a:hover {
+    color: white;
+    -webkit-transform: translateX(-14px);
+    transform: translateX(-14px);
+}
