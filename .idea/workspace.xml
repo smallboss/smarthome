@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6aa329d-7fba-4030-ba77-eaafef3f6d9c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/facebook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/google.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/twitter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/js/templates/LoginForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/js/templates/RegistrationForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/loginForm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/registrationForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/authorization.css" afterPath="$PROJECT_DIR$/client/css/authorization.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/css/main.css" afterPath="$PROJECT_DIR$/client/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/layout/layout.html" afterPath="$PROJECT_DIR$/client/layout/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/router.js" afterPath="$PROJECT_DIR$/client/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/authorization.html" afterPath="$PROJECT_DIR$/client/views/authorization.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/accounts-config.js" afterPath="$PROJECT_DIR$/imports/accounts-config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/users.js" afterPath="$PROJECT_DIR$/imports/api/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.js" afterPath="$PROJECT_DIR$/server/main.js" />
     </list>
     <ignored path="SmartHome.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -293,12 +275,20 @@
       <workItem from="1477897236793" duration="15163000" />
       <workItem from="1477981477412" duration="21844000" />
       <workItem from="1478066829873" duration="4364000" />
-      <workItem from="1478293192866" duration="2417000" />
+      <workItem from="1478293192866" duration="2518000" />
     </task>
+    <task id="LOCAL-00001" summary="version 0.0.1">
+      <created>1478295800638</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1478295800652</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43788000" />
+    <option name="totallyTimeSpent" value="43889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-2" width="1928" height="1086" extended-state="6" />
@@ -334,6 +324,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="version 0.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
