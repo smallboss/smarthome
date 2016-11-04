@@ -15,7 +15,7 @@ if(Meteor.isServer) {
         return "<div><span>Click </span><a target='_blank' href='" + url + "'>here</a><span> to confirm this email</span></div>";
     };
     /*templates for verifyEmail end*/
-    Accounts.config({sendVerificationEmail: true, forbidClientAccountCreation: false});
+    //Accounts.config({sendVerificationEmail: true, forbidClientAccountCreation: false});
     Accounts.onCreateUser(function (options, user) {
         if(options.profile) {
             user.profile = options.profile
@@ -23,10 +23,10 @@ if(Meteor.isServer) {
             user.profile = {
                 name: 'Name User'
             }
-        }
+        }        
         return user
     })
-    Accounts.validateNewUser((user) => {
+    /*Accounts.validateNewUser((user) => {
         new SimpleSchema({
             _id: { type: String },
             emails: { type: Array },
@@ -42,4 +42,36 @@ if(Meteor.isServer) {
         // Return true to allow user creation to proceed
         return true;
     });
+*/
+    ServiceConfiguration.configurations.upsert(
+        {service: 'facebook'},
+        {
+            $set: {
+                clientId: '1337012049650950',
+                loginStyle: "popup",
+                secret: 'eda47ba3d69e8a7fadfb046d611ea354'                
+            }
+        }
+    )
+    ServiceConfiguration.configurations.upsert(
+        {service: 'google'},
+        {
+            $set: {
+                clientId: '776483120777-9mirqrqlqiasi85ed117k3n2btt59m7r.apps.googleusercontent.com',
+                loginStyle: "popup",
+                secret: 'HE-uFwAgN7H2pBJyqVw-fUVL'
+            }
+        }
+    )
+    //ServiceConfiguration.configurations.remove({service: 'twitter'})
+    ServiceConfiguration.configurations.upsert(
+        {service: 'twitter'},
+        {
+            $set: {
+                consumerKey: 'gWtDZn9v2PqfPvWv79GMNnB8z',
+                loginStyle: "popup",
+                secret: '14kxEjTqvB7nJLCpC6ia3oo85f9gNkulPwfmh3GXDmvwg8Uhd9'
+            }
+        }
+    )
 }

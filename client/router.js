@@ -10,6 +10,7 @@ if(Meteor.isClient) {
     })
     Router.route('/', function() {this.render('dashboard')})
     Router.route('/registerCongratulations', function() {this.render('registerCongratulations')})
+    Router.route('/signUp', function() {this.render('registrationForm')})
     Router.route('/dashboard', function () {this.render('dashboard')})
     Router.route('/devicesAll', function () {this.render('devicesAll')})
     Router.route('/projectsAll', function () {this.render('projectsAll')})

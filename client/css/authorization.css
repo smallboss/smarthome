@@ -1,17 +1,21 @@
-.div-authorization #login-buttons {
+.div-authorization {
     float: right;
 }
 .register-congratulations span {
-    padding: 5px;
-    color: #1dfb8a;
-    border: 1px solid grey;
+    /*padding: 5px;*/
+    /*color: #1dfb8a;*/
+    /*border: 1px solid grey;*/
 }
-/*.btn-register {
+.btn-register {
     background: #5b3bff;
     color: white;
     text-shadow: none;
-}*/
-/*.overlay {
+}
+.btn-forgot-password {
+    display: block;
+    margin-top: 10px;
+}
+.overlay {
     position: absolute;
     background: rgba(0,0,0,0.4);
     height: 100vh;
@@ -29,4 +33,25 @@
 }
 #loginModal .modal-sm .form-group div {
     margin: 5px 0;
-}*/
+}
+#loginModal .div-border {
+    margin: 10px auto;
+    width: 90%;
+    border: 1px solid grey;
+}
+.restore-password {
+    display: none;
+}
+.restore-password input[type=button] {
+    margin-right: 10px;
+}
+.form-register input {
+    margin: 10px auto;
+}
+.form-register input:not([type=submit]) {
+    float: left;
+    min-width: 200px;
+}
+.form-register label {
+    margin-top: 15px;
+}

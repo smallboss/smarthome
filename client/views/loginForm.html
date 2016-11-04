@@ -1,0 +1,50 @@
+<template name="loginForm">
+    <form>
+        <div class='row'>
+            <div class='form-group'>
+                <span class="col-xs-1"></span>
+                <label htmlFor='email' class='col-xs-2'>Email:</label>
+                <div class='col-xs-8'>
+                    <input type='email' id='email' class='form-control' name='loginEmail' required />
+                </div>
+                <span class="col-xs-1"></span>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='form-group'>
+                <span class="col-xs-1"></span>
+                <label htmlFor='password' class='col-xs-2'>Password:</label>
+                <div class='col-xs-8'>
+                    <input type='password' id='password' class='form-control' name='loginPassword' required />
+                </div>
+                <span class="col-xs-1"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9"><a href="/restorePassword" id="restorePassword" class="btn-link btn-forgot-password">Forgot password</a></div>
+            <div class="col-xs-1"><input type='submit' class='btn btn-success' value='Login'/></div>
+        </div>
+        <div class="restore-password">
+            <div class="row">
+                <div class='form-group'>
+                    <span class="col-xs-1"></span>
+                    <label htmlFor='emailToRestore' class='col-xs-2'>Enter email:</label>
+                    <div class='col-xs-8'>
+                        <input type='email' id='emailToRestore' class='form-control' name='emailToRestore' />
+                    </div>
+                    <span class="col-xs-1"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-9"></div>
+                <div class="col-xs-3"><input type='button' id="getRestorePassword" class='btn btn-primary pull-right' value='Recover password'/></div>
+            </div>
+        </div>
+        <div class="row text-center"><div class="div-border"></div></div>
+        <div class="row text-center">
+            <a href="/loginWithFacebook" id="loginFacebook"><img src="/img/facebook.png" width="32" alt=""></a>
+            <a href="/loginWithTwitter" id="loginTwitter"><img src="/img/twitter.png" width="32" alt=""></a>
+            <a href="/loginWithGoogle" id="loginGoogle"><img src="/img/google.png" width="32" alt=""></a>
+        </div>
+    </form>
+</template>

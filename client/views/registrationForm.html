@@ -1,0 +1,54 @@
+<template name="registrationForm">
+    <h4>Register user</h4>
+    <div class="col-xs-6">
+        <form class="form-register">
+            <div class='row'>
+                <div class='form-group'>
+                    <span class="col-xs-1"></span>
+                    <label htmlFor='name' class='col-xs-3'>Your Name:</label>
+                    <div class='col-xs-3'>
+                        <input type='text' id='name' class='form-control' name='registerName' required />
+                    </div>
+                    <span class="col-xs-1"></span>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='form-group'>
+                    <span class="col-xs-1"></span>
+                    <label htmlFor='email' class='col-xs-3'>Email:</label>
+                    <div class='col-xs-3'>
+                        <input type='email' id='email' class='form-control' name='registerEmail' required />
+                    </div>
+                    <span class="col-xs-1"></span>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='form-group'>
+                    <span class="col-xs-1"></span>
+                    <label htmlFor='password' class='col-xs-3'>Password:</label>
+                    <div class='col-xs-3'>
+                        <input type='password' id='password' class='form-control' name='registerPassword' required />
+                    </div>
+                    <span class="col-xs-1"></span>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='form-group'>
+                    <span class="col-xs-1"></span>
+                    <label htmlFor='repeat_password' class='col-xs-3'>Repeat password:</label>
+                    <div class='col-xs-3'>
+                        <input type='password' id='repeat_password' class='form-control' name='repeatPassword' required />
+                    </div>
+                    <span class="col-xs-1"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-xs-7">
+                        <input type='submit' class='btn btn-success pull-right' value='Register'/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

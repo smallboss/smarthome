@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-import '/imports/api/users'
 import '/imports/accounts-config'
+import '/imports/api/users'
 import './smtp'
 
 Meteor.startup(() => {
